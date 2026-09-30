@@ -34,7 +34,7 @@ map <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 
 highlight Cursor guibg=#626262
-
+set fileformats=unix,dos,mac
 set cursorline
 highlight clear CursorLine
 highlight CursorLine cterm=underline ctermbg=NONE ctermfg=NONE
