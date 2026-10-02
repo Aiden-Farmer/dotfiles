@@ -2,8 +2,6 @@ colorscheme habamax
 set termguicolors
 set number
 call plug#begin()
-Plug 'tpope/vim-sensible'
-Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -30,8 +28,19 @@ nnoremap <silent> K :call ShowDocumentation()<CR>
 				      endif
 endfunction
 
-map <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
+nnoremap <leader> dd :Lexplore %:p:h<CR>
+nnoremap <leader> da :Lexplore<CR>
+
+nmap <buffer> <TAB> mf
+nmap <buffer> <S-TAB> mF
+nmap <buffer> <Leader><TAB> mu
+
+let g:netrw_keepdir = 0
+let g:netrw_winsize = 30
+let g:netrw_banner = 0
+let g:netrw_localcopydircmd = 'cp -r'
+hi! link netrwMarkFile Search
+
 
 highlight Cursor guibg=#626262
 set fileformats=unix,dos,mac
